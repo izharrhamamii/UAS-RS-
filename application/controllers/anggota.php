@@ -7,6 +7,9 @@ class Anggota extends CI_Controller {
         parent::__construct();
         $this->load->model('Anggota_model');
         $this->load->library('form_validation');
+        if(!$this->session->userdata('login')){
+            redirect('login');
+        }
     }
 
     // tampil data

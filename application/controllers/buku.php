@@ -3,11 +3,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Buku extends CI_Controller {
 
+    public function __construct()
+    {
+        parent::__construct();
+        if(!$this->session->userdata('login')){
+            redirect('login');
+        }
+    }
+
     public function index()
     {
         $data['buku'] = $this->db
             ->join('kategori', 'kategori.id = buku.id_kategori')
-            ->get('buku')->result();
+            ->get('buku')
+            ->result();
 
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');

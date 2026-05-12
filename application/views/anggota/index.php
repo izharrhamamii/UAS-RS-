@@ -1,5 +1,6 @@
 <?php $this->load->view('templates/header'); ?>
 <?php $this->load->view('templates/sidebar'); ?>
+<?php $this->load->view('templates/topbar'); ?>
 
 <div id="content-wrapper" class="d-flex flex-column">
   <div id="content">

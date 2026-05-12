@@ -44,9 +44,23 @@
         </div>
 
         <div class="form-group">
-            <label>Lokasi Rak</label>
-            <input type="text" name="rak" class="form-control" required>
-        </div>
+    <label>Lokasi Rak</label>
+    <select name="lokasi_rak" class="form-control" required>
+        <option value="">-- Pilih Rak --</option>
+
+        <option value="A1">A1</option>
+        <option value="A2">A2</option>
+        <option value="A3">A3</option>
+
+        <option value="B1">B1</option>
+        <option value="B2">B2</option>
+        <option value="B3">B3</option>
+
+        <option value="C1">C1</option>
+        <option value="C2">C2</option>
+        <option value="C3">C3</option>
+    </select>
+</div>
 
         <br>
         <button type="submit" class="btn btn-primary">Simpan</button>

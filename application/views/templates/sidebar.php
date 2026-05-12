@@ -22,27 +22,45 @@
         <span>kategori</span>
     </a>
 </li>
-
+</li>
+<hr class="sidebar-divider my-0">
+<li class="nav-item">
+    <a class="nav-link" href="<?= base_url('buku'); ?>">
+        <i class="fas fa-users"></i>
+        <span>buku</span>
+    </a>
+</li>
+<hr class="sidebar-divider my-0">
+<li class="nav-item">
+    <a class="nav-link" href="<?= base_url('buku_saya'); ?>">
+        <i class="fas fa-users"></i>
+        <span>data buku</span>
+    </a>
+</li>
 <hr class="sidebar-divider my-0">
 
 <li class="nav-item">
-    <a class="nav-link" href="<?= base_url('Buku'); ?>">
-        <i class="fas fa-book"></i>
-        <span>Data Buku</span>
-    </a>
-</li>
-<li class="nav-item">
-    <a class="nav-link" href="<?= base_url('buku_saya'); ?>">
-        <i class="fas fa-book"></i>
-        <span>menampilkan data buku</span>
-    </a>
-</li>
-<li class="nav-item">
     <a class="nav-link" href="<?= base_url('anggota'); ?>">
-        <i class="fas fa-book"></i>
-        <span>anggota</span>
+        <i class="fas fa-users"></i>
+        <span>Anggota</span>
     </a>
 </li>
+
+<hr class="sidebar-divider my-0">
+<li class="nav-item">
+    <a class="nav-link" href="<?= base_url('peminjaman'); ?>">
+        <i class="fas fa-users"></i>
+        <span>peminjaman</span>
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="<?= base_url('laporan/peminjaman'); ?>">
+        <i class="fas fa-users"></i>
+        <span>laporan peminjaman</span>
+    </a>
+</li>
+
 
 <hr class="sidebar-divider d-npne d-md-block">
 </ul>

@@ -19,7 +19,6 @@
             <th>Kategori</th>
             <th>Stok</th>
             <th>Lokasi Rak</th>
-            <th>Aksi</th>
         </tr>
     </thead>
 
@@ -35,12 +34,6 @@
             <td><?= $b->nama_kategori ?></td>
             <td><?= $b->stok ?></td>
             <td><?= $b->lokasi_rak ?></td>
-
-            <td>
-                <a href="<?= base_url('buku/hapus/'.$b->id); ?>"
-                   class="btn btn-danger btn-sm"
-                   onclick="return confirm('Yakin hapus data ini?')">
-                   Hapus
                 </a>
             </td>
         </tr>

@@ -3,98 +3,119 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>login dulu bro</title>
 
-    <title>SB Admin 2 - Login</title>
+<link href="<?= base_url('assets/vendor/fontawesome-free/css/all.min.css');?>" rel="stylesheet">
+<link href="<?= base_url('assets/css/sb-admin-2.min.css');?>" rel="stylesheet">
 
-    <!-- Custom fonts for this template-->
-    <link href="<?= base_url('assets/vendor/fontawesome-free/css/all.min.css');?>" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+<style>
+.bg-login-3d {
+    perspective: 1000px;
+    overflow: hidden;
+}
 
-    <!-- Custom styles for this template-->
-    <link href="<?= base_url('assets/css/sb-admin-2.min.css');?>" rel="stylesheet">
+/* GAMBAR BARU */
+.bg-login-3d-inner {
+    width: 100%;
+    height: 100%;
+    background: url('https://3.bp.blogspot.com/-YZw0Tv3hihk/VE699Km_EUI/AAAAAAAAHn4/gYp6JDzfe9s/s1600/wallpaper%2Bmonyet%2Blucu%2B-%2Bwww.binatang.mewarnaigambar.web.id.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: auto3d 7s infinite ease-in-out;
+    transform-style: preserve-3d;
+}
+
+/* ANIMASI AUTO */
+@keyframes auto3d {
+    0%   { transform: rotateX(0deg) rotateY(0deg) scale(1); }
+    20%  { transform: rotateX(6deg) rotateY(-6deg) scale(1.05); }
+    40%  { transform: rotateX(-5deg) rotateY(5deg) scale(1.04); }
+    60%  { transform: rotateX(4deg) rotateY(-4deg) scale(1.03); }
+    80%  { transform: rotateX(-3deg) rotateY(3deg) scale(1.02); }
+    100% { transform: rotateX(0deg) rotateY(0deg) scale(1); }
+}
+</style>
 
 </head>
 
 <body class="bg-gradient-primary">
 
-    <div class="container">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-xl-10 col-lg-12 col-md-9">
 
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
+<div class="card o-hidden border-0 shadow-lg my-5">
+<div class="card-body p-0">
 
-            <div class="col-xl-10 col-lg-12 col-md-9">
+<div class="row">
 
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
-                                    </div>
-                                    <?php if ($this->session->flashdata('error')): ?>
-                                        <div class="alert alert-danger">
-                                            <?=$this->session->flashdata('error'); ?>
-                                        </div>
-                                        <?php endif; ?>
-                                    <form class="user" method="post" action="<?= site_url('login/proses');?>">
-                                        <div class="form-group">
-                                            <input type="text" name="username" class="form-control form-control-user"
-                                                placeholder="Username" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                name="password" placeholder="Password">
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember
-                                                    Me</label>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
-                                            Login
-                                    </button>
-                                    </form>
-                                    <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- KIRI (AUTO GERAK 3D) -->
+<div class="col-lg-6 d-none d-lg-block bg-login-3d">
+    <div class="bg-login-3d-inner"></div>
+</div>
 
-            </div>
+<!-- KANAN (FORM) -->
+<div class="col-lg-6">
+<div class="p-5">
 
-        </div>
+<div class="text-center">
+    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+</div>
 
+<?php if ($this->session->flashdata('error')): ?>
+<div class="alert alert-danger text-center">
+    <?= $this->session->flashdata('error'); ?>
+</div>
+<?php endif; ?>
+
+<form class="user" method="post" action="<?= site_url('login/proses');?>">
+
+<div class="form-group">
+    <input type="text" name="username" class="form-control form-control-user" placeholder="Username" required>
+</div>
+
+<div class="form-group">
+    <input type="password" name="password" class="form-control form-control-user" placeholder="Password" required>
+</div>
+
+<div class="form-group">
+    <div class="custom-control custom-checkbox small">
+        <input type="checkbox" class="custom-control-input" id="remember">
+        <label class="custom-control-label" for="remember">Remember Me</label>
     </div>
+</div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="<?= base_url('assets/vendor/jquery/jquery.min.js');?>"></script>
-    <script src="<?= base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js');?>"></script>
+<button type="submit" class="btn btn-primary btn-user btn-block">
+    Login
+</button>
 
-    <!-- Core plugin JavaScript-->
-    <script src="<?= base_url('assets/vendor/jquery-easing/jquery.easing.min.js');?>"></script>
+</form>
 
-    <!-- Custom scripts for all pages-->
-    <script src="<?= base_url('assets/js/sb-admin-2.min.js');?>"></script>
+<hr>
+
+<div class="text-center">
+    <a class="small" href="#">Forgot Password?</a>
+</div>
+
+<div class="text-center">
+    <a class="small" href="#">Create an Account!</a>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<script src="<?= base_url('assets/vendor/jquery/jquery.min.js');?>"></script>
+<script src="<?= base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js');?>"></script>
 
 </body>
-
 </html>

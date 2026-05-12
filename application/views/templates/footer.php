@@ -30,7 +30,7 @@ var ctx = document.getElementById("chartDashboard").getContext('2d');
 var chart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Buku', 'Anggota'],
+        labels: ['Buku', 'Anggota','peminjaman'],
         datasets: [{
             label: 'Jumlah Data',
             data: [
@@ -38,8 +38,8 @@ var chart = new Chart(ctx, {
                 <?= $total_anggota; ?>
             ],
             backgroundColor: [
-                '#4e73df',
-                '#1cc88a'
+                '#000000',
+                '#ff6200'
             ]
         }]
     },

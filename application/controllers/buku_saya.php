@@ -3,6 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Buku_saya extends CI_Controller {
 
+      public function __construct()
+    {
+        parent::__construct();
+        if(!$this->session->userdata('login')){
+            redirect('login');
+        }
+    }
     // =====================
     // NO 2 - READ DATA
     // =====================
