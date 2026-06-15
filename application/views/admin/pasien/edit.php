@@ -6,7 +6,7 @@
 
 <i class="fas fa-user-edit mr-2"></i>
 
-Edit Data Pasien
+Edit Data Pasienn
 
 </h2>
 
